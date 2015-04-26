@@ -265,7 +265,11 @@ class Indonesia
   	if @check.count < 1
   		return @check
   	else
-  		return @check.map!{ |element| element.gsub("nol", "").gsub("  ", " ") }
+  		if @check.nil?
+  			return "nol"
+  		else
+  			return @check.map!{ |element| element.gsub("nol", "").gsub("  ", " ") }
+  		end
   	end	
   end
 
