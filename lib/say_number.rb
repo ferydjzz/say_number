@@ -31,7 +31,7 @@ module SayNumber
   			@saying.push(Indonesia.get_number_sayer_per_separator(i, @array[i]))
   		end
   		@saying = @saying.reverse.join(" ")
-  		return Indonesia.check_nol(@saying).first
+  		return Indonesia.check_nol(@saying).first.strip
   	else
   		raise "Unknown Language"
   	end

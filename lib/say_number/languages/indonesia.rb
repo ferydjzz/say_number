@@ -1,7 +1,7 @@
 class Indonesia
 	def self.initialize_sayer
 		@satuan_id = ["nol", "satu", "dua", "tiga", "empat", "lima", "enam", "tujuh", "delapan", "sembilan"]
-		@anomalies  = {10=>"sepuluh", 11=>"sebelas", 100=>"seratus", 1000=>"seribu" }
+		@anomalies  = {10=>"sepuluh", 11=>"sebelas", 100=>"seratus", 1000=>"seribu", 1000000=>"juta", 1000000000=>"miliyar", 1000000000000=>"triliun" }
 	end
 
   def self.get_number_sayer_ratusan(number)
@@ -130,19 +130,19 @@ class Indonesia
   	@sayer = []
   	@temp = number.first
   	if number.count == 1
-			return @sayer.push(@satuan_id[@temp]).push("juta")
+			return @sayer.push(@satuan_id[@temp]).push(@anomalies[1000000])
 		elsif number.count == 2
 			if number[1] == 1
 				if @temp == 1 or @temp == 0
-					@sayer.push(@anomalies[10+@temp]).push("juta")
+					@sayer.push(@anomalies[10+@temp]).push(@anomalies[1000000])
 				else
-					@sayer.push(@satuan_id[@temp]).push("belas").push("juta")
+					@sayer.push(@satuan_id[@temp]).push("belas").push(@anomalies[1000000])
 				end
 			else
 				if @temp != 0
-					@sayer.push(@satuan_id[number[1]]).push("puluh").push(@satuan_id[@temp]).push("juta")
+					@sayer.push(@satuan_id[number[1]]).push("puluh").push(@satuan_id[@temp]).push(@anomalies[1000000])
 				else
-					@sayer.push(@satuan_id[number[1]]).push("puluh").push("juta")
+					@sayer.push(@satuan_id[number[1]]).push("puluh").push(@anomalies[1000000])
 				end
 			end
 			return @sayer
@@ -154,7 +154,7 @@ class Indonesia
 					if number[1] != 0
 						@sayer.push(@anomalies[100])
 					else
-						@sayer.push(@anomalies[100]).push("juta")	
+						@sayer.push(@anomalies[100]).push(@anomalies[1000000])	
 					end
 				end
 			else
@@ -166,7 +166,7 @@ class Indonesia
 						if number[1] != 0
 							@sayer.push(@satuan_id[number.last]).push("ratus")
 						else
-							@sayer.push(@satuan_id[number.last]).push("ratus").push("juta")
+							@sayer.push(@satuan_id[number.last]).push("ratus").push(@anomalies[1000000])
 						end
 						
 					end
@@ -174,19 +174,19 @@ class Indonesia
 			end
 			if number[1] == 1
 				if @temp == 1 or @temp == 0
-					@sayer.push(@anomalies[10+@temp]).push("juta")
+					@sayer.push(@anomalies[10+@temp]).push(@anomalies[1000000])
 				else
-					@sayer.push(@satuan_id[@temp]).push("belas").push("juta")
+					@sayer.push(@satuan_id[@temp]).push("belas").push(@anomalies[1000000])
 				end
 			elsif number[1] == 0
 				if @temp != 0
-					@sayer.push(@satuan_id[@temp]).push("juta")
+					@sayer.push(@satuan_id[@temp]).push(@anomalies[1000000])
 				end
 			else
 				if @temp != 0
-					@sayer.push(@satuan_id[number[1]]).push("puluh").push(@satuan_id[@temp]).push("juta")
+					@sayer.push(@satuan_id[number[1]]).push("puluh").push(@satuan_id[@temp]).push(@anomalies[1000000])
 				else
-					@sayer.push(@satuan_id[number[1]]).push("puluh").push("juta")
+					@sayer.push(@satuan_id[number[1]]).push("puluh").push(@anomalies[1000000])
 				end
 			end
 			return @sayer
@@ -197,19 +197,19 @@ class Indonesia
   	@sayer = []
   	@temp = number.first
   	if number.count == 1
-			return @sayer.push(@satuan_id[@temp]).push("milyar")
+			return @sayer.push(@satuan_id[@temp]).push(@anomalies[1000000000])
 		elsif number.count == 2
 			if number[1] == 1
 				if @temp == 1 or @temp == 0
-					@sayer.push(@anomalies[10+@temp]).push("milyar")
+					@sayer.push(@anomalies[10+@temp]).push(@anomalies[1000000000])
 				else
-					@sayer.push(@satuan_id[@temp]).push("belas").push("milyar")
+					@sayer.push(@satuan_id[@temp]).push("belas").push(@anomalies[1000000000])
 				end
 			else
 				if @temp != 0
-					@sayer.push(@satuan_id[number[1]]).push("puluh").push(@satuan_id[@temp]).push("milyar")
+					@sayer.push(@satuan_id[number[1]]).push("puluh").push(@satuan_id[@temp]).push(@anomalies[1000000000])
 				else
-					@sayer.push(@satuan_id[number[1]]).push("puluh").push("milyar")
+					@sayer.push(@satuan_id[number[1]]).push("puluh").push(@anomalies[1000000000])
 				end
 			end
 			return @sayer
@@ -221,7 +221,7 @@ class Indonesia
 					if number[1] != 0
 						@sayer.push(@anomalies[100])
 					else
-						@sayer.push(@anomalies[100]).push("milyar")	
+						@sayer.push(@anomalies[100]).push(@anomalies[1000000000])	
 					end
 				end
 			else
@@ -233,7 +233,7 @@ class Indonesia
 						if number[1] != 0
 							@sayer.push(@satuan_id[number.last]).push("ratus")
 						else
-							@sayer.push(@satuan_id[number.last]).push("ratus").push("milyar")
+							@sayer.push(@satuan_id[number.last]).push("ratus").push(@anomalies[1000000000])
 						end
 						
 					end
@@ -241,19 +241,19 @@ class Indonesia
 			end
 			if number[1] == 1
 				if @temp == 1 or @temp == 0
-					@sayer.push(@anomalies[10+@temp]).push("milyar")
+					@sayer.push(@anomalies[10+@temp]).push(@anomalies[1000000000])
 				else
-					@sayer.push(@satuan_id[@temp]).push("belas").push("milyar")
+					@sayer.push(@satuan_id[@temp]).push("belas").push(@anomalies[1000000000])
 				end
 			elsif number[1] == 0
 				if @temp != 0
-					@sayer.push(@satuan_id[@temp]).push("milyar")
+					@sayer.push(@satuan_id[@temp]).push(@anomalies[1000000000])
 				end
 			else
 				if @temp != 0
-					@sayer.push(@satuan_id[number[1]]).push("puluh").push(@satuan_id[@temp]).push("milyar")
+					@sayer.push(@satuan_id[number[1]]).push("puluh").push(@satuan_id[@temp]).push(@anomalies[1000000000])
 				else
-					@sayer.push(@satuan_id[number[1]]).push("puluh").push("milyar")
+					@sayer.push(@satuan_id[number[1]]).push("puluh").push(@anomalies[1000000000])
 				end
 			end
 			return @sayer

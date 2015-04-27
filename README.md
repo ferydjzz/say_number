@@ -3,18 +3,18 @@
 Welcome to SayNumber, this is my first gem, I know there is a lot that need to be improve, so let me know if you have any suggestion.
 
 SayNumber is a simple gem that say the given number
+
 (SayNumber adalah gem untuk menggenerate #terbilang dari angka yang diinginkan)
 
 in example : 123400 => "seratus dua puluh tiga ribu empat ratus"
+
 for now it can only in Indonesian, but I will update it soon and add English
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-```ruby
-gem 'say_number'
-```
+	gem 'say_number'
 
 And then execute:
 
@@ -27,12 +27,14 @@ Or install it yourself as:
 ## Usage
 
 Simple, just call it SayNumber.say()
+
 example : 
-```ruby 
-SayNumber.say(100320)
-```
+ 
+	SayNumber.say(100320)
+
 it will generate 
-"seratus ribu tiga ratus dua puluh"
+
+	"seratus ribu tiga ratus dua puluh"
 
 ## Contributing
 
@@ -41,3 +43,7 @@ it will generate
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+## Suggestion
+
+if you have suggestion or request, you can send me an email to ferydjzz@gmail.com
