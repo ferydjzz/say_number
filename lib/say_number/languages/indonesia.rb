@@ -260,7 +260,7 @@ class Indonesia
 		end	
   end
 
-    def self.get_number_sayer_ratus_triliunan(number)
+  def self.get_number_sayer_ratus_triliunan(number)
   	@sayer = []
   	@temp = number.first
   	if number.count == 1
@@ -328,15 +328,14 @@ class Indonesia
   end
 
   def self.check_nol(saying)
+  	if saying == ["nol"] or saying == "nol"
+  		return ["nol"]
+  	end
   	@check = saying.split(@satuan_id.first)
   	if @check.count < 1
   		return @check
   	else
-  		if @check.nil?
-  			return "nol"
-  		else
-  			return @check.map!{ |element| element.gsub("nol", "").gsub("  ", " ") }
-  		end
+  		return @check.map!{ |element| element.gsub("nol", "").gsub("  ", " ") }
   	end	
   end
 
@@ -356,5 +355,4 @@ class Indonesia
   		raise "exceeds the calculation function"
   	end
   end
-
 end

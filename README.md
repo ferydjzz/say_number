@@ -36,6 +36,22 @@ it will generate
 
 	"seratus ribu tiga ratus dua puluh"
 
+be careful with the number that you parse, ruby can't take a leading 0, in example if you pass 
+
+	SayNumber.say(0123)               # delapan puluh tiga
+
+the result would be far from expected, because Ruby will take it as hexadecimal, not octal number.
+To make sure you pass the right number, you can pass it as string instead of number
+
+	SayNumber.say("0123")             # seratus dua puluh tiga
+
+if you want to show the result in UPPERCASE or Capitalize, you can simple put upcase or capitalize in the end of the say() function
+
+	SayNumber.say(123).upcase         # SERATUS DUA PULUH TIGA
+
+	SayNumber.say(123).split.map(&:capitalize).join(' ')     # Seratus Dua Puluh Tiga
+
+
 ## Contributing
 
 1. Fork it ( https://github.com/ferydjzz/say_number/fork )

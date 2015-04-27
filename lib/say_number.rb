@@ -1,5 +1,6 @@
 require "say_number/version"
 require_relative "say_number/languages/indonesia"
+require_relative "say_number/languages/english"
 
 
 module SayNumber
@@ -32,7 +33,18 @@ module SayNumber
   		end
   		@saying = @saying.reverse.join(" ")
   		return Indonesia.check_nol(@saying).first.strip
-  	else
+  	elsif language == :en
+      English.initialize_sayer
+      @separated = digit_separator(number.to_i)
+      @array = @separated.split(".")
+      @length = @array.count
+      @saying = []
+      for i in 0..@length-1
+        @saying.push(English.get_number_sayer_per_separator(i, @array[i]))
+      end
+      @saying = @saying.reverse.join(" ")
+      return English.check_nol(@saying).first.strip
+    else
   		raise "Unknown Language"
   	end
   end   
