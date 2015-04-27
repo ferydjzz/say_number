@@ -9,7 +9,7 @@ SayNumber is a simple gem that say the given number
 in example : 123400 => "seratus dua puluh tiga ribu empat ratus"
 
 
-Yeay \(*v*)/ ... Now you can say_number in english too
+Yeay... Now you can say_number in english too
 
 the maximum number is 100 Trillion for now.
 
@@ -40,7 +40,7 @@ it will generate
 
 	"seratus ribu tiga ratus dua puluh"
 
-Yeay \(*v*)/ ... Now you can say_number in english too. just add :en in say()
+Yeay... Now you can say_number in english too. just add :en in say()
 
 	SayNumber.say(100320, :en)
 
