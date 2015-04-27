@@ -8,7 +8,11 @@ SayNumber is a simple gem that say the given number
 
 in example : 123400 => "seratus dua puluh tiga ribu empat ratus"
 
-for now it can only in Indonesian, but I will update it soon and add English
+
+Yeay \(*v*)/ ... Now you can say_number in english too
+
+the maximum number is 100 Trillion for now.
+
 
 ## Installation
 
@@ -35,6 +39,17 @@ example :
 it will generate 
 
 	"seratus ribu tiga ratus dua puluh"
+
+Yeay \(*v*)/ ... Now you can say_number in english too. just add :en in say()
+
+	SayNumber.say(100320, :en)
+
+it will generate 
+
+	"one hundred thousand three hundred twenty"
+
+*note : I leave the 'and' because I don't really know where to put it, any suggestion or reference page would be great.
+
 
 be careful with the number that you parse, ruby can't take a leading 0, in example if you pass 
 
