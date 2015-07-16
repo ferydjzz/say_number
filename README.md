@@ -1,18 +1,12 @@
 # SayNumber
 
-Welcome to SayNumber, this is my first gem, I know there is a lot that need to be improve, so let me know if you have any suggestion.
-
 SayNumber is a simple gem that say the given number
 
-(SayNumber adalah gem untuk menggenerate #terbilang dari angka yang diinginkan)
+available in two language:
+:id = Indonesia
+:en = English
 
-in example : 123400 => "seratus dua puluh tiga ribu empat ratus"
-
-
-Yeay... Now you can say_number in english too
-
-the maximum number is 100 Trillion for now.
-
+the maximum limit number for now is 999,999,999,999,999
 
 ## Installation
 
