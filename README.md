@@ -5,7 +5,7 @@ SayNumber is a simple gem that say the given number in word
 available in two language:
 
 	:id = Indonesia (default)
-	
+
 	:en = English
 
 the maximum limit number for now is 999,999,999,999,999
@@ -36,7 +36,7 @@ it will generate
 
 	"seratus ribu tiga ratus dua puluh"
 
-in english you need to put :en in parameter say(@number, :en)
+in english you need to put :en in parameter say(number, :en)
 
 	SayNumber.say(100320, :en)
 
@@ -46,6 +46,15 @@ it will generate
 
 *note : I leave the 'and' because I don't really know where to put it, any suggestion or reference page would be great.
 
+with the latest version (1.0.0), you will be able to pass float number and get the point (koma) in word
+
+	SayNumber.say(1234.123) 		  # seribu dua ratus tiga puluh empat koma satu dua tiga
+
+	SayNumber.say(1234.123, :en)	  # one thousand two hundred thirty four point one two three
+
+if you want to get the exact value behind the float point, make sure you pass it as a string because Ruby will round it up automatically.
+
+see the spec for more example
 
 be careful with the number that you parse, ruby can't take a leading 0, in example if you pass 
 
