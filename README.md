@@ -1,10 +1,12 @@
 # SayNumber
 
-SayNumber is a simple gem that say the given number
+SayNumber is a simple gem that say the given number in word
 
 available in two language:
-:id = Indonesia
-:en = English
+
+	:id = Indonesia (default)
+	
+	:en = English
 
 the maximum limit number for now is 999,999,999,999,999
 
@@ -24,7 +26,7 @@ Or install it yourself as:
 
 ## Usage
 
-Simple, just call it SayNumber.say()
+put the number in the SayNumber.say() function
 
 example : 
  
@@ -34,7 +36,7 @@ it will generate
 
 	"seratus ribu tiga ratus dua puluh"
 
-Yeay... Now you can say_number in english too. just add :en in say()
+in english you need to put :en in parameter say(@number, :en)
 
 	SayNumber.say(100320, :en)
 
@@ -49,10 +51,14 @@ be careful with the number that you parse, ruby can't take a leading 0, in examp
 
 	SayNumber.say(0123)               # delapan puluh tiga
 
+	SayNumber.say(0123)				  # eighty three
+
 the result would be far from expected, because Ruby will take it as hexadecimal, not octal number.
 To make sure you pass the right number, you can pass it as string instead of number
 
 	SayNumber.say("0123")             # seratus dua puluh tiga
+
+	SayNumber.say("0123", :en)		  # one hundred twenty three
 
 if you want to show the result in UPPERCASE or Capitalize, you can simple put upcase or capitalize in the end of the say() function
 
