@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Fery Japminto"]
   spec.email         = ["ferydjzz@gmail.com"]
 
-  spec.summary       = %q{a simple gem that say the given number in word.}
+  spec.summary       = %q{a simple gem that say the given number in word. Available in two languages, Indonesian and English. Support float number in the latest version (1.0.0).}
   spec.description   = %q{a simple gem that say the given number in word. Available in two languages, Indonesian and English. Support float number in the latest version (1.0.0).}
   spec.homepage      = "https://github.com/ferydjzz/say_number"
   spec.license       = "MIT"
