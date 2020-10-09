@@ -80,7 +80,7 @@ if you want to show the result in UPPERCASE or Capitalize, you can simple put up
 added configurable on version 1.0.2 to enable/disable decimal, thinking to add more configurable like the language passed to SayNumber to dynamically fetch from I18n language on Rails apps
 
 	SayNumber.configure do |config|
-		config.use_decimal = false
+	  config.use_decimal = false
 	end
 
 ## Contributing
