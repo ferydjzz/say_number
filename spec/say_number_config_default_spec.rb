@@ -62,6 +62,10 @@ describe SayNumber do
         number = '917111305080302.10001'
         expect(SayNumber.say(number, :en)).to eq 'nine hundred seventeen trillion one hundred eleven billion three hundred five million eighty thousand three hundred two point one zero zero zero one'
       end
+      it 'return one hundred thousand three hundred twenty point zero zero zero zero two' do
+        number = 100320.00002
+        expect(SayNumber.say(number, :en)).to eq 'one hundred thousand three hundred twenty point zero zero zero zero two'
+      end
     end
   end
 end

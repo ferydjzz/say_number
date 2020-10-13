@@ -70,17 +70,10 @@ module SayNumber
     end
   end
 
-  private
-
   def self.get_koma(number)
-    splited = number.to_s.split(".")
-    zero = [0]
-    if splited.count == 2 && splited.last != "0"
-      # normalize the floating point .00
-      koma = zero.push(splited.last).join(".").to_f
-      return koma.to_s.split(".").last
-    else
-      nil
-    end
+    splited = number.to_s.split('.')
+    return nil unless splited.count == 2 && splited.last != '0'
+
+    splited.last
   end
 end
