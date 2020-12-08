@@ -17,21 +17,21 @@ describe SayNumber do
         number = 320032.001
         expect(SayNumber.say(number)).to eq 'tiga ratus dua puluh ribu tiga puluh dua koma nol nol satu'
       end
-      it 'return tiga miliyar dua puluh juta tiga ratus dua puluh ribu tiga ratus dua' do
+      it 'return tiga miliar dua puluh juta tiga ratus dua puluh ribu tiga ratus dua' do
         number = 3020320302.0
-        expect(SayNumber.say(number)).to eq 'tiga miliyar dua puluh juta tiga ratus dua puluh ribu tiga ratus dua'
+        expect(SayNumber.say(number)).to eq 'tiga miliar dua puluh juta tiga ratus dua puluh ribu tiga ratus dua'
       end
-      it 'return sepuluh miliyar seratus satu juta seratus satu ribu seratus satu koma satu dua tiga' do
+      it 'return sepuluh miliar seratus satu juta seratus satu ribu seratus satu koma satu dua tiga' do
         number = 10101101101.123
-        expect(SayNumber.say(number)).to eq 'sepuluh miliyar seratus satu juta seratus satu ribu seratus satu koma satu dua tiga'
+        expect(SayNumber.say(number)).to eq 'sepuluh miliar seratus satu juta seratus satu ribu seratus satu koma satu dua tiga'
       end
-      it 'return satu miliyar dua ratus tiga puluh empat juta lima ratus enam puluh tujuh ribu delapan ratus sembilan puluh koma sembilan sembilan' do
+      it 'return satu miliar dua ratus tiga puluh empat juta lima ratus enam puluh tujuh ribu delapan ratus sembilan puluh koma sembilan sembilan' do
         number = 1234567890.99000
-        expect(SayNumber.say(number)).to eq 'satu miliyar dua ratus tiga puluh empat juta lima ratus enam puluh tujuh ribu delapan ratus sembilan puluh koma sembilan sembilan'
+        expect(SayNumber.say(number)).to eq 'satu miliar dua ratus tiga puluh empat juta lima ratus enam puluh tujuh ribu delapan ratus sembilan puluh koma sembilan sembilan'
       end
-      it 'return sepuluh miliyar dua juta tiga ribu satu koma nol nol nol satu dua' do
+      it 'return sepuluh miliar dua juta tiga ribu satu koma nol nol nol satu dua' do
         number = 10002003001.00012
-        expect(SayNumber.say(number)).to eq 'sepuluh miliyar dua juta tiga ribu satu koma nol nol nol satu dua'
+        expect(SayNumber.say(number)).to eq 'sepuluh miliar dua juta tiga ribu satu koma nol nol nol satu dua'
       end
     end
 
