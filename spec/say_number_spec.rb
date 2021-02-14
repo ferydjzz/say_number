@@ -3,7 +3,7 @@ require_relative "../lib/say_number"
 describe SayNumber do
   describe "Indonesia" do
     subject { SayNumber.say(@number) }
-    
+
     context "basic number" do
       it "return nol" do
         @number = 0
@@ -21,9 +21,9 @@ describe SayNumber do
         @number = 10000000
         expect(subject).to eq "sepuluh juta"
       end
-      it "return seratus miliyar" do
+      it "return seratus miliar" do
         @number = 100000000000
-        expect(subject).to eq "seratus miliyar"
+        expect(subject).to eq "seratus miliar"
       end
       it "return seratus triliun" do
         @number = 100000000000000
@@ -44,25 +44,25 @@ describe SayNumber do
         @number = 320032
         expect(subject).to eq "tiga ratus dua puluh ribu tiga puluh dua"
       end
-      it "return tiga miliyar dua puluh juta tiga ratus dua puluh ribu tiga ratus dua" do
+      it "return tiga miliar dua puluh juta tiga ratus dua puluh ribu tiga ratus dua" do
         @number = 3020320302
-        expect(subject).to eq "tiga miliyar dua puluh juta tiga ratus dua puluh ribu tiga ratus dua"
+        expect(subject).to eq "tiga miliar dua puluh juta tiga ratus dua puluh ribu tiga ratus dua"
       end
-      it "return sepuluh miliyar seratus satu juta seratus satu ribu seratus satu" do
+      it "return sepuluh miliar seratus satu juta seratus satu ribu seratus satu" do
         @number = 10101101101
-        expect(subject).to eq "sepuluh miliyar seratus satu juta seratus satu ribu seratus satu"
+        expect(subject).to eq "sepuluh miliar seratus satu juta seratus satu ribu seratus satu"
       end
-      it "return satu miliyar dua ratus tiga puluh empat juta lima ratus enam puluh tujuh ribu delapan ratus sembilan puluh" do
+      it "return satu miliar dua ratus tiga puluh empat juta lima ratus enam puluh tujuh ribu delapan ratus sembilan puluh" do
         @number = 1234567890
-        expect(subject).to eq "satu miliyar dua ratus tiga puluh empat juta lima ratus enam puluh tujuh ribu delapan ratus sembilan puluh"
+        expect(subject).to eq "satu miliar dua ratus tiga puluh empat juta lima ratus enam puluh tujuh ribu delapan ratus sembilan puluh"
       end
-      it "return sepuluh miliyar dua juta tiga ribu satu" do
+      it "return sepuluh miliar dua juta tiga ribu satu" do
         @number = 10002003001
-        expect(subject).to eq "sepuluh miliyar dua juta tiga ribu satu"
+        expect(subject).to eq "sepuluh miliar dua juta tiga ribu satu"
       end
-      it "return sembilan ratus tujuh belas triliun seratus sebelas miliyar tiga ratus lima juta delapan puluh ribu tiga ratus dua" do
+      it "return sembilan ratus tujuh belas triliun seratus sebelas miliar tiga ratus lima juta delapan puluh ribu tiga ratus dua" do
         @number = 917111305080302
-        expect(subject).to eq "sembilan ratus tujuh belas triliun seratus sebelas miliyar tiga ratus lima juta delapan puluh ribu tiga ratus dua"
+        expect(subject).to eq "sembilan ratus tujuh belas triliun seratus sebelas miliar tiga ratus lima juta delapan puluh ribu tiga ratus dua"
       end
     end
 
@@ -75,36 +75,36 @@ describe SayNumber do
         @number = 320032.001
         expect(subject).to eq "tiga ratus dua puluh ribu tiga puluh dua koma nol nol satu"
       end
-      it "return tiga miliyar dua puluh juta tiga ratus dua puluh ribu tiga ratus dua" do
+      it "return tiga miliar dua puluh juta tiga ratus dua puluh ribu tiga ratus dua" do
         @number = 3020320302.0
-        expect(subject).to eq "tiga miliyar dua puluh juta tiga ratus dua puluh ribu tiga ratus dua"
+        expect(subject).to eq "tiga miliar dua puluh juta tiga ratus dua puluh ribu tiga ratus dua"
       end
-      it "return sepuluh miliyar seratus satu juta seratus satu ribu seratus satu koma satu dua tiga" do
+      it "return sepuluh miliar seratus satu juta seratus satu ribu seratus satu koma satu dua tiga" do
         @number = 10101101101.123
-        expect(subject).to eq "sepuluh miliyar seratus satu juta seratus satu ribu seratus satu koma satu dua tiga"
+        expect(subject).to eq "sepuluh miliar seratus satu juta seratus satu ribu seratus satu koma satu dua tiga"
       end
-      it "return satu miliyar dua ratus tiga puluh empat juta lima ratus enam puluh tujuh ribu delapan ratus sembilan puluh koma sembilan sembilan" do
+      it "return satu miliar dua ratus tiga puluh empat juta lima ratus enam puluh tujuh ribu delapan ratus sembilan puluh koma sembilan sembilan" do
         @number = 1234567890.99000
-        expect(subject).to eq "satu miliyar dua ratus tiga puluh empat juta lima ratus enam puluh tujuh ribu delapan ratus sembilan puluh koma sembilan sembilan"
+        expect(subject).to eq "satu miliar dua ratus tiga puluh empat juta lima ratus enam puluh tujuh ribu delapan ratus sembilan puluh koma sembilan sembilan"
       end
-      it "return sepuluh miliyar dua juta tiga ribu satu koma nol nol nol satu dua" do
+      it "return sepuluh miliar dua juta tiga ribu satu koma nol nol nol satu dua" do
         @number = 10002003001.00012
-        expect(subject).to eq "sepuluh miliyar dua juta tiga ribu satu koma nol nol nol satu dua"
+        expect(subject).to eq "sepuluh miliar dua juta tiga ribu satu koma nol nol nol satu dua"
       end
       it "return the rounding point" do
         @number = 917111305080302.123
-        expect(subject).to eq "sembilan ratus tujuh belas triliun seratus sebelas miliyar tiga ratus lima juta delapan puluh ribu tiga ratus dua koma satu"
+        expect(subject).to eq "sembilan ratus tujuh belas triliun seratus sebelas miliar tiga ratus lima juta delapan puluh ribu tiga ratus dua koma satu"
       end
       it "return the exact value" do
         @number = "917111305080302.10001"
-        expect(subject).to eq "sembilan ratus tujuh belas triliun seratus sebelas miliyar tiga ratus lima juta delapan puluh ribu tiga ratus dua koma satu nol nol nol satu"
+        expect(subject).to eq "sembilan ratus tujuh belas triliun seratus sebelas miliar tiga ratus lima juta delapan puluh ribu tiga ratus dua koma satu nol nol nol satu"
       end
     end
   end
 
   describe "English" do
     subject { SayNumber.say(@number, :en) }
-    
+
     context "basic number" do
       it "return zero" do
         @number = 0

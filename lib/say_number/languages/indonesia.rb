@@ -1,7 +1,7 @@
 class Indonesia
   def self.initialize_sayer
     @satuan_id = ["nol", "satu", "dua", "tiga", "empat", "lima", "enam", "tujuh", "delapan", "sembilan"]
-    @anomalies  = {10=>"sepuluh", 11=>"sebelas", 100=>"seratus", 1000=>"seribu", 1000000=>"juta", 1000000000=>"miliyar", 1000000000000=>"triliun" }
+    @anomalies  = {10=>"sepuluh", 11=>"sebelas", 100=>"seratus", 1000=>"seribu", 1000000=>"juta", 1000000000=>"miliar", 1000000000000=>"triliun" }
   end
 
   def self.say_koma(koma)
@@ -30,7 +30,7 @@ class Indonesia
         if @temp != 0
           @sayer.push(@satuan_id[number[1]]).push("puluh").push(@satuan_id[@temp])
         else
-          @sayer.push(@satuan_id[number[1]]).push("puluh")  
+          @sayer.push(@satuan_id[number[1]]).push("puluh")
         end
       end
       return @sayer
@@ -57,18 +57,18 @@ class Indonesia
         if @temp != 0
           @sayer.push(@satuan_id[number[1]]).push("puluh").push(@satuan_id[@temp])
         else
-          @sayer.push(@satuan_id[number[1]]).push("puluh")  
+          @sayer.push(@satuan_id[number[1]]).push("puluh")
         end
       end
       return @sayer
-    end 
+    end
   end
 
   def self.get_number_sayer_ratus_ribuan(number)
     @sayer = []
     @temp = number.first
     if number.count == 1
-      if @temp == 1 
+      if @temp == 1
         @sayer.push(@anomalies[1000])
       else
         @sayer.push(@satuan_id[@temp]).push("ribu")
@@ -98,7 +98,7 @@ class Indonesia
             @sayer.push(@anomalies[100])
           else
             @sayer.push(@anomalies[100]).push("ribu")
-          end         
+          end
         end
       else
         if number.last == 0
@@ -110,8 +110,8 @@ class Indonesia
               @sayer.push(@satuan_id[number.last]).push("ratus")
             else
               @sayer.push(@satuan_id[number.last]).push("ratus").push("ribu")
-            end         
-            
+            end
+
           end
         end
       end
@@ -164,7 +164,7 @@ class Indonesia
           if number[1] != 0
             @sayer.push(@anomalies[100])
           else
-            @sayer.push(@anomalies[100]).push(@anomalies[1000000])  
+            @sayer.push(@anomalies[100]).push(@anomalies[1000000])
           end
         end
       else
@@ -178,7 +178,7 @@ class Indonesia
             else
               @sayer.push(@satuan_id[number.last]).push("ratus").push(@anomalies[1000000])
             end
-            
+
           end
         end
       end
@@ -200,7 +200,7 @@ class Indonesia
         end
       end
       return @sayer
-    end 
+    end
   end
 
   def self.get_number_sayer_ratus_milyaran(number)
@@ -231,7 +231,7 @@ class Indonesia
           if number[1] != 0
             @sayer.push(@anomalies[100])
           else
-            @sayer.push(@anomalies[100]).push(@anomalies[1000000000]) 
+            @sayer.push(@anomalies[100]).push(@anomalies[1000000000])
           end
         end
       else
@@ -245,7 +245,7 @@ class Indonesia
             else
               @sayer.push(@satuan_id[number.last]).push("ratus").push(@anomalies[1000000000])
             end
-            
+
           end
         end
       end
@@ -267,7 +267,7 @@ class Indonesia
         end
       end
       return @sayer
-    end 
+    end
   end
 
   def self.get_number_sayer_ratus_triliunan(number)
@@ -298,7 +298,7 @@ class Indonesia
           if number[1] != 0
             @sayer.push(@anomalies[100])
           else
-            @sayer.push(@anomalies[100]).push(@anomalies[1000000000000])  
+            @sayer.push(@anomalies[100]).push(@anomalies[1000000000000])
           end
         end
       else
@@ -312,7 +312,7 @@ class Indonesia
             else
               @sayer.push(@satuan_id[number.last]).push("ratus").push(@anomalies[1000000000000])
             end
-            
+
           end
         end
       end
@@ -334,7 +334,7 @@ class Indonesia
         end
       end
       return @sayer
-    end 
+    end
   end
 
   def self.check_nol(saying)
@@ -346,7 +346,7 @@ class Indonesia
       return @check
     else
       return @check.map!{ |element| element.gsub("nol", "").gsub("  ", " ") }
-    end 
+    end
   end
 
   def self.get_number_sayer_per_separator(block, number)
@@ -361,7 +361,7 @@ class Indonesia
       get_number_sayer_ratus_milyaran(@array_number)
     elsif block == 4
       get_number_sayer_ratus_triliunan(@array_number)
-    else 
+    else
       raise "exceeds the calculation function"
     end
   end

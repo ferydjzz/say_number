@@ -28,11 +28,11 @@ Or install it yourself as:
 
 put the number in the SayNumber.say() function
 
-example : 
- 
+example :
+
 	SayNumber.say(100320)
 
-it will generate 
+it will generate
 
 	"seratus ribu tiga ratus dua puluh"
 
@@ -40,7 +40,7 @@ in english you need to put :en in parameter say(number, :en)
 
 	SayNumber.say(100320, :en)
 
-it will generate 
+it will generate
 
 	"one hundred thousand three hundred twenty"
 
@@ -56,7 +56,7 @@ if you want to get the exact value behind the float point, make sure you pass it
 
 see the spec for more example
 
-be careful with the number that you parse, ruby can't take a leading 0, in example if you pass 
+be careful with the number that you parse, ruby can't take a leading 0, in example if you pass
 
 	SayNumber.say(0123)               # delapan puluh tiga
 
@@ -75,6 +75,13 @@ if you want to show the result in UPPERCASE or Capitalize, you can simple put up
 
 	SayNumber.say(123).split.map(&:capitalize).join(' ')     # Seratus Dua Puluh Tiga
 
+## Update
+
+added configurable on version 1.0.2 to enable/disable decimal, thinking to add more configurable like the language passed to SayNumber to dynamically fetch from I18n language on Rails apps
+
+	SayNumber.configure do |config|
+	  config.use_decimal = false
+	end
 
 ## Contributing
 
